@@ -1,4 +1,41 @@
 // ===========================
+// Theme Toggle (Dark/Light Mode)
+// ===========================
+document.addEventListener('DOMContentLoaded', function() {
+    // Get theme toggle button
+    const themeToggle = document.getElementById('themeToggle');
+    
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Update toggle button icon
+    updateThemeIcon(currentTheme);
+    
+    // Theme toggle click handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
+    
+    // Update theme icon function
+    function updateThemeIcon(theme) {
+        if (themeToggle) {
+            const icon = themeToggle.querySelector('i');
+            if (icon) {
+                icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+    }
+});
+
+// ===========================
 // Mobile Navigation Toggle
 // ===========================
 document.addEventListener('DOMContentLoaded', function() {
@@ -39,14 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===========================
 // Scroll to Top Button
 // ===========================
-const scrollTopBtn = document.getElementById('scrollTop');
+const scrollTopBtn = document.getElementById('scroll-top');
 
 if (scrollTopBtn) {
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
-            scrollTopBtn.classList.add('show');
+            scrollTopBtn.classList.add('visible');
         } else {
-            scrollTopBtn.classList.remove('show');
+            scrollTopBtn.classList.remove('visible');
         }
     });
     
