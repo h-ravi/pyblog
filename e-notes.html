@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PyBlog - Download free Python, Data Science, and AI/ML resources">
+    <title>E-Notes - PyBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>PyBlog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="e-notes.html" class="active">E-Notes</a></li>
+                    <li><a href="source-code.html">Source Code</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>E-Notes & Resources</h1>
+            <p>Download free cheat sheets, guides, and educational materials</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="resources-filter">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="resourceSearch" placeholder="Search resources...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="data-science">Data Science</button>
+                    <button class="filter-btn" data-filter="ml">ML/AI</button>
+                    <button class="filter-btn" data-filter="cheatsheet">Cheat Sheets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Resource 1 -->
+                <div class="resource-card" data-category="python cheatsheet">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Python Cheat Sheet</h3>
+                        <p>Complete reference guide for Python syntax, built-in functions, and common operations.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.3k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 4 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Basics</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('python-cheatsheet.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 2 -->
+                <div class="resource-card" data-category="python cheatsheet">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Pandas Quick Reference</h3>
+                        <p>Essential Pandas commands for data manipulation, filtering, grouping, and analysis.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.8k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 3 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Data Science</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('pandas-reference.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 3 -->
+                <div class="resource-card" data-category="data-science">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Data Science Roadmap</h3>
+                        <p>Comprehensive guide to becoming a data scientist with step-by-step learning path.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 3.1k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 8 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Career</span>
+                            <span class="tag">Data Science</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('data-science-roadmap.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 4 -->
+                <div class="resource-card" data-category="ml cheatsheet">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Machine Learning Algorithms Guide</h3>
+                        <p>Overview of popular ML algorithms, when to use them, and key parameters.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.7k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 10 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('ml-algorithms.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 5 -->
+                <div class="resource-card" data-category="python cheatsheet">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>NumPy Cheat Sheet</h3>
+                        <p>Quick reference for NumPy array operations, functions, and best practices.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.5k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 2 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Arrays</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('numpy-cheatsheet.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 6 -->
+                <div class="resource-card" data-category="data-science">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Data Visualization Best Practices</h3>
+                        <p>Guidelines for creating effective and beautiful data visualizations.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.2k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 6 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Visualization</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('data-viz-guide.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 7 -->
+                <div class="resource-card" data-category="ml">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Deep Learning Fundamentals</h3>
+                        <p>Introduction to neural networks, architectures, and deep learning concepts.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.9k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 15 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Neural Networks</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('deep-learning-guide.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 8 -->
+                <div class="resource-card" data-category="python">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Python Data Structures Guide</h3>
+                        <p>Comprehensive guide to lists, tuples, sets, and dictionaries in Python.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.9k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 7 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Structures</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('data-structures.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 9 -->
+                <div class="resource-card" data-category="data-science cheatsheet">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Statistical Analysis Cheat Sheet</h3>
+                        <p>Key statistical concepts, tests, and formulas for data analysis.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.4k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 4 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Analysis</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('statistics-cheatsheet.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 10 -->
+                <div class="resource-card" data-category="ml">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Scikit-learn Model Selection</h3>
+                        <p>Guide to choosing the right machine learning model for your problem.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.1k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 5 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Model Selection</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('model-selection.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 11 -->
+                <div class="resource-card" data-category="python">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Python Regular Expressions</h3>
+                        <p>Master regex patterns for text processing and data extraction in Python.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 1.1k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 3 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">Regex</span>
+                            <span class="tag">Text Processing</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('regex-guide.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resource 12 -->
+                <div class="resource-card" data-category="data-science">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>SQL for Data Science</h3>
+                        <p>Essential SQL queries and database concepts for data scientists.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF</span>
+                            <span><i class="fas fa-download"></i> 2.4k downloads</span>
+                            <span><i class="fas fa-chart-line"></i> 9 pages</span>
+                        </div>
+                        <div class="resource-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Database</span>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="downloadResource('sql-guide.pdf')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PyBlog</h3>
+                    <p>Your trusted resource for Python, Data Science, and AI/ML learning materials.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="e-notes.html">E-Notes</a></li>
+                        <li><a href="source-code.html">Source Code</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new tutorials and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

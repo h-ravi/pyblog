@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PyBlog - Read articles on Python, Data Science, AI/ML, and Data Analytics">
+    <title>Blog - PyBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>PyBlog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="e-notes.html">E-Notes</a></li>
+                    <li><a href="source-code.html">Source Code</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Blog</h1>
+            <p>Explore our latest articles on Python, Data Science, and AI/ML</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="blogSearch" placeholder="Search articles...">
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#" class="category-filter" data-category="all">All Posts <span>(24)</span></a></li>
+                            <li><a href="#" class="category-filter" data-category="python">Python <span>(8)</span></a></li>
+                            <li><a href="#" class="category-filter" data-category="data-science">Data Science <span>(6)</span></a></li>
+                            <li><a href="#" class="category-filter" data-category="ai-ml">AI/ML <span>(5)</span></a></li>
+                            <li><a href="#" class="category-filter" data-category="data-analytics">Data Analytics <span>(3)</span></a></li>
+                            <li><a href="#" class="category-filter" data-category="data-cleaning">Data Cleaning <span>(2)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Popular Posts</h3>
+                        <div class="popular-posts">
+                            <div class="popular-post-item">
+                                <span class="post-number">1</span>
+                                <div>
+                                    <a href="#">Python List Comprehensions Explained</a>
+                                    <span class="post-views"><i class="fas fa-eye"></i> 2.5k</span>
+                                </div>
+                            </div>
+                            <div class="popular-post-item">
+                                <span class="post-number">2</span>
+                                <div>
+                                    <a href="#">Machine Learning Model Evaluation</a>
+                                    <span class="post-views"><i class="fas fa-eye"></i> 1.8k</span>
+                                </div>
+                            </div>
+                            <div class="popular-post-item">
+                                <span class="post-number">3</span>
+                                <div>
+                                    <a href="#">Pandas DataFrame Operations</a>
+                                    <span class="post-views"><i class="fas fa-eye"></i> 1.6k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Tags</h3>
+                        <div class="tags">
+                            <a href="#" class="tag">Python</a>
+                            <a href="#" class="tag">Pandas</a>
+                            <a href="#" class="tag">NumPy</a>
+                            <a href="#" class="tag">Scikit-learn</a>
+                            <a href="#" class="tag">TensorFlow</a>
+                            <a href="#" class="tag">Deep Learning</a>
+                            <a href="#" class="tag">Data Viz</a>
+                            <a href="#" class="tag">SQL</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="blog-main">
+                    <div class="blog-posts" id="blogPosts">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/16a085?text=Python+Basics" alt="Python Basics">
+                                <span class="post-category python">Python</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Getting Started with Python: A Beginner's Guide</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 10, 2025</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                    <span><i class="far fa-comment"></i> 12 comments</span>
+                                </div>
+                                <p>Python is one of the most popular programming languages today. Learn the fundamentals including variables, data types, control structures, and functions. This comprehensive guide will get you started on your Python journey...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/3498db?text=Data+Visualization" alt="Data Visualization">
+                                <span class="post-category data-science">Data Science</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Data Visualization with Matplotlib and Seaborn</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 12, 2025</span>
+                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                    <span><i class="far fa-comment"></i> 8 comments</span>
+                                </div>
+                                <p>Visualizing data is crucial for understanding patterns and insights. Explore powerful visualization libraries in Python like Matplotlib and Seaborn to create stunning charts, graphs, and interactive visualizations...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/9b59b6?text=Machine+Learning" alt="Machine Learning">
+                                <span class="post-category ai-ml">AI/ML</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Introduction to Machine Learning with Scikit-learn</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 14, 2025</span>
+                                    <span><i class="far fa-clock"></i> 10 min read</span>
+                                    <span><i class="far fa-comment"></i> 15 comments</span>
+                                </div>
+                                <p>Discover the basics of machine learning and build your first predictive model using Python's Scikit-learn library. Learn about supervised and unsupervised learning, model training, and evaluation metrics...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/e74c3c?text=Data+Cleaning" alt="Data Cleaning">
+                                <span class="post-category data-cleaning">Data Cleaning</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Master Data Cleaning Techniques in Python</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 8, 2025</span>
+                                    <span><i class="far fa-clock"></i> 7 min read</span>
+                                    <span><i class="far fa-comment"></i> 6 comments</span>
+                                </div>
+                                <p>Data cleaning is a critical step in any data analysis project. Learn how to handle missing values, remove duplicates, fix data types, and transform messy data into clean, usable datasets using Pandas...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 5 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/f39c12?text=Data+Analytics" alt="Data Analytics">
+                                <span class="post-category data-analytics">Data Analytics</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Exploratory Data Analysis: A Step-by-Step Guide</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 6, 2025</span>
+                                    <span><i class="far fa-clock"></i> 9 min read</span>
+                                    <span><i class="far fa-comment"></i> 10 comments</span>
+                                </div>
+                                <p>Exploratory Data Analysis (EDA) is essential for understanding your data. Learn techniques for summarizing main characteristics, detecting outliers, and discovering patterns using statistical methods...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 6 -->
+                        <article class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://via.placeholder.com/600x350/1a1a2e/16a085?text=Python+Functions" alt="Python Functions">
+                                <span class="post-category python">Python</span>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2><a href="#">Python Functions: From Basics to Advanced</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="far fa-user"></i> Admin</span>
+                                    <span><i class="far fa-calendar"></i> Oct 4, 2025</span>
+                                    <span><i class="far fa-clock"></i> 6 min read</span>
+                                    <span><i class="far fa-comment"></i> 9 comments</span>
+                                </div>
+                                <p>Functions are the building blocks of reusable code. Master Python functions including parameters, return values, lambda functions, decorators, and best practices for writing clean, maintainable code...</p>
+                                <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="page-link disabled"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">4</a>
+                        <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PyBlog</h3>
+                    <p>Your trusted resource for Python, Data Science, and AI/ML learning materials.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="e-notes.html">E-Notes</a></li>
+                        <li><a href="source-code.html">Source Code</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new tutorials and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

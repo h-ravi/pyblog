@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PyBlog - Access Python code snippets and GitHub repositories">
+    <title>Source Code - PyBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>PyBlog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="e-notes.html">E-Notes</a></li>
+                    <li><a href="source-code.html" class="active">Source Code</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Source Code</h1>
+            <p>Explore code snippets and GitHub repositories for your projects</p>
+        </div>
+    </section>
+
+    <!-- Code Snippets Section -->
+    <section class="code-section">
+        <div class="container">
+            <h2 class="section-title">Popular Code Snippets</h2>
+            
+            <!-- Code Snippet 1 -->
+            <div class="code-card">
+                <div class="code-header">
+                    <h3><i class="fab fa-python"></i> Data Cleaning with Pandas</h3>
+                    <button class="copy-btn" onclick="copyCode('code1')">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="code-description">
+                    <p>Clean and preprocess data by handling missing values, removing duplicates, and standardizing formats.</p>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code class="language-python" id="code1">import pandas as pd
+import numpy as np
+
+# Load dataset
+df = pd.read_csv('data.csv')
+
+# Handle missing values
+df['column_name'].fillna(df['column_name'].mean(), inplace=True)
+
+# Remove duplicates
+df.drop_duplicates(inplace=True)
+
+# Convert data types
+df['date_column'] = pd.to_datetime(df['date_column'])
+
+# Remove outliers using IQR method
+Q1 = df['numeric_column'].quantile(0.25)
+Q3 = df['numeric_column'].quantile(0.75)
+IQR = Q3 - Q1
+df = df[~((df['numeric_column'] < (Q1 - 1.5 * IQR)) | 
+          (df['numeric_column'] > (Q3 + 1.5 * IQR)))]
+
+# Standardize text columns
+df['text_column'] = df['text_column'].str.lower().str.strip()
+
+print(f"Cleaned dataset shape: {df.shape}")
+</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span class="code-tag">Pandas</span>
+                    <span class="code-tag">Data Cleaning</span>
+                    <span class="code-tag">Preprocessing</span>
+                </div>
+            </div>
+
+            <!-- Code Snippet 2 -->
+            <div class="code-card">
+                <div class="code-header">
+                    <h3><i class="fab fa-python"></i> Machine Learning Model Training</h3>
+                    <button class="copy-btn" onclick="copyCode('code2')">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="code-description">
+                    <p>Train a machine learning model with cross-validation and hyperparameter tuning.</p>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code class="language-python" id="code2">from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, accuracy_score
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Define model and parameters
+model = RandomForestClassifier(random_state=42)
+param_grid = {
+    'n_estimators': [100, 200, 300],
+    'max_depth': [10, 20, 30, None],
+    'min_samples_split': [2, 5, 10]
+}
+
+# Grid search with cross-validation
+grid_search = GridSearchCV(
+    model, param_grid, cv=5, scoring='accuracy', n_jobs=-1
+)
+grid_search.fit(X_train, y_train)
+
+# Best model
+best_model = grid_search.best_estimator_
+print(f"Best parameters: {grid_search.best_params_}")
+
+# Predictions and evaluation
+y_pred = best_model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print(classification_report(y_test, y_pred))
+</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span class="code-tag">Scikit-learn</span>
+                    <span class="code-tag">Machine Learning</span>
+                    <span class="code-tag">Classification</span>
+                </div>
+            </div>
+
+            <!-- Code Snippet 3 -->
+            <div class="code-card">
+                <div class="code-header">
+                    <h3><i class="fab fa-python"></i> Data Visualization Dashboard</h3>
+                    <button class="copy-btn" onclick="copyCode('code3')">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="code-description">
+                    <p>Create interactive visualizations using Matplotlib and Seaborn.</p>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code class="language-python" id="code3">import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Set style
+sns.set_style("darkgrid")
+plt.rcParams['figure.figsize'] = (12, 8)
+
+# Create subplots
+fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+
+# Plot 1: Distribution
+sns.histplot(data=df, x='column1', kde=True, ax=axes[0, 0])
+axes[0, 0].set_title('Distribution of Column 1')
+
+# Plot 2: Scatter plot
+sns.scatterplot(data=df, x='column2', y='column3', 
+                hue='category', ax=axes[0, 1])
+axes[0, 1].set_title('Correlation Analysis')
+
+# Plot 3: Box plot
+sns.boxplot(data=df, x='category', y='value', ax=axes[1, 0])
+axes[1, 0].set_title('Value Distribution by Category')
+
+# Plot 4: Heatmap
+correlation = df.select_dtypes(include=['float64', 'int64']).corr()
+sns.heatmap(correlation, annot=True, cmap='coolwarm', ax=axes[1, 1])
+axes[1, 1].set_title('Correlation Matrix')
+
+plt.tight_layout()
+plt.savefig('dashboard.png', dpi=300, bbox_inches='tight')
+plt.show()
+</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span class="code-tag">Matplotlib</span>
+                    <span class="code-tag">Seaborn</span>
+                    <span class="code-tag">Visualization</span>
+                </div>
+            </div>
+
+            <!-- Code Snippet 4 -->
+            <div class="code-card">
+                <div class="code-header">
+                    <h3><i class="fab fa-python"></i> Web Scraping with BeautifulSoup</h3>
+                    <button class="copy-btn" onclick="copyCode('code4')">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="code-description">
+                    <p>Extract data from websites using requests and BeautifulSoup.</p>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code class="language-python" id="code4">import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+
+def scrape_website(url):
+    """Scrape data from a website"""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Extract data
+        data = []
+        items = soup.find_all('div', class_='item')
+        
+        for item in items:
+            title = item.find('h2').text.strip()
+            description = item.find('p', class_='description').text.strip()
+            price = item.find('span', class_='price').text.strip()
+            
+            data.append({
+                'title': title,
+                'description': description,
+                'price': price
+            })
+        
+        return data
+    
+    except Exception as e:
+        print(f"Error: {e}")
+        return []
+
+# Scrape multiple pages
+all_data = []
+for page in range(1, 6):
+    url = f"https://example.com/page/{page}"
+    data = scrape_website(url)
+    all_data.extend(data)
+    time.sleep(2)  # Be respectful
+
+# Save to CSV
+df = pd.DataFrame(all_data)
+df.to_csv('scraped_data.csv', index=False)
+print(f"Scraped {len(df)} items")
+</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span class="code-tag">BeautifulSoup</span>
+                    <span class="code-tag">Web Scraping</span>
+                    <span class="code-tag">Data Extraction</span>
+                </div>
+            </div>
+
+            <!-- Code Snippet 5 -->
+            <div class="code-card">
+                <div class="code-header">
+                    <h3><i class="fab fa-python"></i> Time Series Analysis</h3>
+                    <button class="copy-btn" onclick="copyCode('code5')">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+                <div class="code-description">
+                    <p>Analyze and forecast time series data using Python libraries.</p>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code class="language-python" id="code5">import pandas as pd
+import numpy as np
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.arima.model import ARIMA
+import matplotlib.pyplot as plt
+
+# Load time series data
+df = pd.read_csv('timeseries.csv', parse_dates=['date'], index_col='date')
+
+# Resample to daily frequency
+df_daily = df.resample('D').mean()
+
+# Decompose time series
+decomposition = seasonal_decompose(df_daily['value'], model='additive', period=30)
+
+# Plot components
+fig, axes = plt.subplots(4, 1, figsize=(12, 10))
+decomposition.observed.plot(ax=axes[0], title='Observed')
+decomposition.trend.plot(ax=axes[1], title='Trend')
+decomposition.seasonal.plot(ax=axes[2], title='Seasonal')
+decomposition.resid.plot(ax=axes[3], title='Residual')
+plt.tight_layout()
+
+# ARIMA forecasting
+model = ARIMA(df_daily['value'], order=(1, 1, 1))
+results = model.fit()
+
+# Forecast next 30 days
+forecast = results.forecast(steps=30)
+print(f"Forecast:\n{forecast}")
+
+# Plot forecast
+plt.figure(figsize=(12, 6))
+plt.plot(df_daily.index, df_daily['value'], label='Historical')
+plt.plot(forecast.index, forecast, label='Forecast', color='red')
+plt.legend()
+plt.title('Time Series Forecast')
+plt.show()
+</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span class="code-tag">Time Series</span>
+                    <span class="code-tag">ARIMA</span>
+                    <span class="code-tag">Forecasting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Repositories Section -->
+    <section class="repos-section">
+        <div class="container">
+            <h2 class="section-title">GitHub Repositories</h2>
+            <div class="repos-grid">
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Data Science Projects</h3>
+                    </div>
+                    <p>Collection of end-to-end data science projects including EDA, modeling, and deployment.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 234 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 45 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Machine Learning Algorithms</h3>
+                    </div>
+                    <p>Implementation of popular ML algorithms from scratch with detailed explanations.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 189 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 32 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Data Visualization Gallery</h3>
+                    </div>
+                    <p>Beautiful and interactive data visualizations using Python libraries.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 156 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 28 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Deep Learning Models</h3>
+                    </div>
+                    <p>Neural network architectures for computer vision and NLP tasks.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 312 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 67 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Web Scraping Tools</h3>
+                    </div>
+                    <p>Reusable tools and scripts for web scraping various websites.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 98 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 19 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Python Automation Scripts</h3>
+                    </div>
+                    <p>Automate everyday tasks with Python scripts and utilities.</p>
+                    <div class="repo-stats">
+                        <span><i class="fas fa-star"></i> 127 stars</span>
+                        <span><i class="fas fa-code-branch"></i> 23 forks</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary btn-block">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PyBlog</h3>
+                    <p>Your trusted resource for Python, Data Science, and AI/ML learning materials.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="e-notes.html">E-Notes</a></li>
+                        <li><a href="source-code.html">Source Code</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new tutorials and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

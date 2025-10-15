@@ -1,0 +1,137 @@
+### **Persona**:
+
+You are a highly skilled Full-Stack Web Developer with a focus on building responsive, user-friendly educational platforms and technical blogs. Your expertise lies in clean, semantic HTML, modern, modular CSS, and JavaScript for creating static websites that are both aesthetically appealing and functionally rich. You aim to create websites that are intuitive, scalable, and easy to maintain, with a special emphasis on performance and accessibility.
+
+---
+
+### **Task**:
+
+You are tasked with developing a multi-page educational website named **"PyBlog"**. This website will serve as a resource platform for **Python**, **Data Science**, **Data Analytics**, **Data Cleaning**, and **AI/ML** topics. The platform will include a blog, tutorials, downloadable resources, and source code sharing, providing a valuable resource hub for students, professionals, and anyone interested in these fields.
+
+### **Website Structure**:
+
+The website will have a **multi-page structure** with the following key pages:
+
+1. **Home**:
+
+   * This will be the landing page of the site, offering a concise and welcoming introduction to the blog.
+   * The page should feature a **hero section** that highlights the blog’s key topics (Python, Data Science, AI/ML) with a call to action.
+   * Display a few **featured articles** or **tutorials** that provide the user with easy access to the most popular or latest content.
+   * Include a **search bar** for quick navigation to articles or tutorials.
+
+2. **Blog**:
+
+   * A **blog post listing page** that will feature all published blog posts.
+   * Display blog posts in a **card-based layout** with a thumbnail image, the post title, an excerpt, and a link to the full post.
+   * Implement **pagination** or an **infinite scroll** to allow users to load more posts seamlessly.
+   * Include a **filter or category section** (optional) to group posts by topics (e.g., Python Basics, Data Analysis, AI Algorithms).
+
+3. **Tutorials**:
+
+   * A dedicated page for step-by-step **tutorials** on topics like Python programming, data cleaning, and machine learning.
+   * Each tutorial should be broken down into clear, manageable sections with code examples, explanations, and visual aids where applicable.
+   * Tutorials should be arranged in a grid or list view with clickable links to each tutorial.
+   * Include a **progress bar** or **completion marker** to help users track their progress through longer tutorials.
+
+4. **E-Notes**:
+
+   * This page will feature downloadable educational materials such as **PDFs**, **cheat sheets**, and other helpful resources.
+   * Create a simple, easy-to-navigate list or grid of available resources with the option to download them directly.
+   * Resources could include **Python cheat sheets**, **Data Science resources**, or **AI/ML guides**.
+   * Make sure to include a **search/filter option** so users can quickly find relevant resources.
+
+5. **Source Code**:
+
+   * This section will allow users to access **code snippets** or link to external **GitHub repositories** for more in-depth projects and source code.
+   * Display each code snippet with a **syntax-highlighted code block** (Python syntax specifically), and a **copy to clipboard** button for easy use.
+   * Provide links to **GitHub repositories** or other open-source projects you’ve worked on or curated.
+
+6. **About**:
+
+   * A page that provides detailed information about the website, the author(s), and the mission of the blog.
+   * Include a brief bio of the author(s) with photos (optional), and any relevant credentials or experience in the field of Python and Data Science.
+   * Highlight the purpose of the blog and how it benefits the target audience.
+
+---
+
+### **Design and Layout**:
+
+The design should be **modern, clean, and professional**, with the following features:
+
+1. **Color Scheme**:
+
+   * Opt for a **dark theme** with shades of dark gray or black as the primary background, and use accent colors such as **light blues**, **greens**, or **purples** to highlight important elements (e.g., links, buttons, headings).
+   * Ensure that the text contrasts well with the background for accessibility and legibility.
+
+2. **Typography**:
+
+   * Use a **clear, legible font** for body text (such as `Roboto`, `Open Sans`, or `Lato`), and a more distinctive font for headings (e.g., `Montserrat`, `Merriweather`).
+   * Font sizes should be carefully chosen to ensure readability on all screen sizes.
+   * Include appropriate line heights, letter spacing, and margin/padding to maintain good text flow and spacing.
+
+3. **Layout**:
+
+   * The website must be **fully responsive** across different devices: desktops, tablets, and mobile phones. This includes adjusting the navigation layout, image sizes, and content blocks.
+   * Implement a **fixed navigation bar** that stays at the top of the page as users scroll. The navigation bar should have links to all key pages.
+   * The **footer** should contain social media links, copyright information, and perhaps links to terms and privacy policies.
+   * Use **flexbox** and **CSS grid** layouts for flexibility and responsive behavior across all screen sizes.
+
+4. **Interactive Elements**:
+
+   * Implement interactive elements, such as collapsible sections, modals for displaying additional information, and hover effects on buttons and links to improve user experience.
+   * Ensure all buttons, forms, and navigation links are easy to interact with, especially on mobile devices (use larger clickable areas).
+   * The website should include a **scroll-to-top** button for easier navigation, especially on longer pages.
+
+---
+
+### **Functionality**:
+
+1. **Reusable Components**:
+
+   * Create reusable components for things like **cards** (for blog posts, tutorials, resources), **buttons**, and **code blocks**. These components should be easy to modify and extend.
+   * Use **classes and IDs** to style these components consistently across the website.
+
+2. **Code Snippets**:
+
+   * Implement a **code block component** that highlights Python syntax and provides a **"copy to clipboard"** functionality. This will make it easy for users to quickly copy Python code for their own use.
+   * Consider integrating **highlight.js** or **Prism.js** for syntax highlighting.
+
+3. **SEO and Accessibility**:
+
+   * Structure your HTML with proper **semantic tags** (e.g., `<header>`, `<footer>`, `<article>`, `<section>`) to ensure SEO-friendly markup and screen reader accessibility.
+   * Make sure **alt text** is provided for all images, and include **aria-labels** where needed.
+   * Ensure that all clickable elements are accessible using the keyboard, and provide visual cues (e.g., focus outlines) for interactive elements.
+
+4. **Performance**:
+
+   * Optimize images for web use, using modern formats like **WebP** and ensuring images are served in appropriate sizes.
+   * Minimize CSS and JavaScript files and consider **lazy loading** for images and scripts to improve page load times.
+
+5. **User Interaction**:
+
+   * Implement JavaScript for features like:
+
+     * A **mobile-friendly navigation menu** that can expand/collapse when clicked.
+     * A **search feature** that filters blog posts or tutorials as the user types.
+     * A **copy to clipboard** function for code blocks to enable easy code sharing.
+
+6. **Content Management**:
+
+   * Use **placeholder content** (text, images, and code snippets) that is relevant to Python, Data Science, AI/ML, and Data Analytics. This should make it easy to replace content later with your own articles, tutorials, and resources.
+
+---
+
+### **Format**:
+
+The entire solution should be a **complete code block**. The code should be well-structured, commented, and easy to understand, making it easy for you to modify the content and deploy the website.
+
+---
+
+### **Context**:
+
+The final goal of this project is to create a **template-ready** website for **"PyBlog"**. This website will serve as a personal blog and resource hub focused on Python and Data Science topics. The target audience includes students, aspiring data scientists, and professionals interested in learning and staying up-to-date with Python and Data Science, as well as people who are looking for tutorials, code examples, and downloadable resources. The website should be easily customizable, allowing you to start populating it with your own content without requiring significant changes to the layout or structure.
+
+---
+
+This enhanced prompt should give you clear, comprehensive guidelines for developing a full-featured educational blog website that is visually appealing, functionally rich, and easy to maintain.
+

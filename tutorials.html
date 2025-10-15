@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PyBlog - Step-by-step tutorials on Python, Data Science, and AI/ML">
+    <title>Tutorials - PyBlog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>PyBlog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                    <li><a href="e-notes.html">E-Notes</a></li>
+                    <li><a href="source-code.html">Source Code</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tutorials</h1>
+            <p>Step-by-step guides to master Python, Data Science, and AI/ML</p>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section class="tutorials-section">
+        <div class="container">
+            <div class="tutorials-list">
+                <!-- Tutorial 1 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge">Beginner</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 2 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">01</div>
+                        <div class="tutorial-info">
+                            <h2>Python Fundamentals for Data Science</h2>
+                            <p>Learn Python basics including variables, data types, operators, control flow, functions, and modules essential for data science.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 8 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 12 Exercises</span>
+                                <span><i class="fas fa-users"></i> 1,250 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial1')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial1">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> Variables and Data Types</li>
+                            <li><i class="fas fa-check-circle"></i> Operators and Expressions</li>
+                            <li><i class="fas fa-check-circle"></i> Control Flow (if/else, loops)</li>
+                            <li><i class="fas fa-check-circle"></i> Functions and Lambda Expressions</li>
+                            <li><i class="fas fa-check-circle"></i> Lists, Tuples, and Dictionaries</li>
+                            <li><i class="fas fa-check-circle"></i> String Manipulation</li>
+                            <li><i class="fas fa-check-circle"></i> File I/O Operations</li>
+                            <li><i class="fas fa-check-circle"></i> Exception Handling</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tutorial 2 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge intermediate">Intermediate</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 3 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">02</div>
+                        <div class="tutorial-info">
+                            <h2>Data Manipulation with Pandas</h2>
+                            <p>Master Pandas library for data manipulation, cleaning, and analysis. Work with DataFrames, Series, and perform complex data operations.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 10 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 15 Exercises</span>
+                                <span><i class="fas fa-users"></i> 980 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial2')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial2">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> Creating and Loading DataFrames</li>
+                            <li><i class="fas fa-check-circle"></i> Data Selection and Filtering</li>
+                            <li><i class="fas fa-check-circle"></i> Handling Missing Data</li>
+                            <li><i class="fas fa-check-circle"></i> Data Aggregation and Grouping</li>
+                            <li><i class="fas fa-check-circle"></i> Merging and Joining DataFrames</li>
+                            <li><i class="fas fa-check-circle"></i> Time Series Analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Data Transformation</li>
+                            <li><i class="fas fa-check-circle"></i> Exporting Data</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tutorial 3 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge intermediate">Intermediate</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 2.5 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">03</div>
+                        <div class="tutorial-info">
+                            <h2>NumPy for Numerical Computing</h2>
+                            <p>Learn NumPy for efficient numerical computations. Master arrays, mathematical operations, and linear algebra fundamentals.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 7 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 10 Exercises</span>
+                                <span><i class="fas fa-users"></i> 850 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial3')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial3">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> NumPy Arrays and Indexing</li>
+                            <li><i class="fas fa-check-circle"></i> Array Operations and Broadcasting</li>
+                            <li><i class="fas fa-check-circle"></i> Mathematical Functions</li>
+                            <li><i class="fas fa-check-circle"></i> Linear Algebra Operations</li>
+                            <li><i class="fas fa-check-circle"></i> Random Number Generation</li>
+                            <li><i class="fas fa-check-circle"></i> Array Manipulation</li>
+                            <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tutorial 4 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge">Beginner</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 2 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">04</div>
+                        <div class="tutorial-info">
+                            <h2>Data Visualization with Matplotlib</h2>
+                            <p>Create stunning visualizations using Matplotlib. Learn to build charts, customize plots, and present data effectively.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 6 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 8 Exercises</span>
+                                <span><i class="fas fa-users"></i> 720 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial4')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial4">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> Basic Plotting with Matplotlib</li>
+                            <li><i class="fas fa-check-circle"></i> Line Charts and Scatter Plots</li>
+                            <li><i class="fas fa-check-circle"></i> Bar Charts and Histograms</li>
+                            <li><i class="fas fa-check-circle"></i> Customizing Plots</li>
+                            <li><i class="fas fa-check-circle"></i> Subplots and Layouts</li>
+                            <li><i class="fas fa-check-circle"></i> Saving and Exporting Figures</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tutorial 5 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge advanced">Advanced</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 4 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">05</div>
+                        <div class="tutorial-info">
+                            <h2>Machine Learning with Scikit-learn</h2>
+                            <p>Build and train machine learning models using Scikit-learn. Cover regression, classification, clustering, and model evaluation.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 12 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 18 Exercises</span>
+                                <span><i class="fas fa-users"></i> 1,100 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial5')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial5">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> Machine Learning Fundamentals</li>
+                            <li><i class="fas fa-check-circle"></i> Data Preprocessing</li>
+                            <li><i class="fas fa-check-circle"></i> Linear and Logistic Regression</li>
+                            <li><i class="fas fa-check-circle"></i> Decision Trees and Random Forests</li>
+                            <li><i class="fas fa-check-circle"></i> Support Vector Machines</li>
+                            <li><i class="fas fa-check-circle"></i> K-Means Clustering</li>
+                            <li><i class="fas fa-check-circle"></i> Model Evaluation Metrics</li>
+                            <li><i class="fas fa-check-circle"></i> Cross-Validation</li>
+                            <li><i class="fas fa-check-circle"></i> Hyperparameter Tuning</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tutorial 6 -->
+                <article class="tutorial-item">
+                    <div class="tutorial-header">
+                        <span class="tutorial-badge intermediate">Intermediate</span>
+                        <span class="tutorial-duration"><i class="far fa-clock"></i> 2.5 hours</span>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-number-large">06</div>
+                        <div class="tutorial-info">
+                            <h2>Web Scraping with BeautifulSoup</h2>
+                            <p>Extract data from websites using Python. Learn HTML parsing, data extraction techniques, and ethical web scraping practices.</p>
+                            <div class="tutorial-meta">
+                                <span><i class="fas fa-book"></i> 6 Lessons</span>
+                                <span><i class="fas fa-tasks"></i> 9 Exercises</span>
+                                <span><i class="fas fa-users"></i> 650 Students</span>
+                            </div>
+                            <div class="tutorial-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Complete</span>
+                            </div>
+                            <button class="btn btn-primary tutorial-btn" onclick="toggleTutorialDetails('tutorial6')">
+                                Start Tutorial <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tutorial-details" id="tutorial6">
+                        <h3>What You'll Learn:</h3>
+                        <ul class="lesson-list">
+                            <li><i class="fas fa-check-circle"></i> HTML and CSS Basics</li>
+                            <li><i class="fas fa-check-circle"></i> Making HTTP Requests</li>
+                            <li><i class="fas fa-check-circle"></i> Parsing HTML with BeautifulSoup</li>
+                            <li><i class="fas fa-check-circle"></i> Extracting Data from Tables</li>
+                            <li><i class="fas fa-check-circle"></i> Handling Pagination</li>
+                            <li><i class="fas fa-check-circle"></i> Best Practices and Ethics</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PyBlog</h3>
+                    <p>Your trusted resource for Python, Data Science, and AI/ML learning materials.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="e-notes.html">E-Notes</a></li>
+                        <li><a href="source-code.html">Source Code</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new tutorials and articles.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
